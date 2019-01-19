@@ -16,7 +16,7 @@ resource "azurerm_public_ip" "pip1" {
     name                         = "vm1Pip"
     location                     = "${var.location}"
     resource_group_name          = "${azurerm_resource_group.resource_group.name}"
-    public_ip_address_allocation = "dynamic"
+    allocation_method            = "Dynamic"
 }
 
 resource "azurerm_network_security_group" "nsg1" {
